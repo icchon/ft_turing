@@ -1,0 +1,11 @@
+
+services:
+  turing:
+    image: ocaml/opam:debian-12-ocaml-5.5
+    container_name: turing
+    volumes:
+      - ./:/app
+    working_dir: /app
+    # entrypoint: "bash -c 'opam install ocamlfind'"
+    stdin_open: true
+    tty: true

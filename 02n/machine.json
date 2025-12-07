@@ -1,0 +1,23 @@
+{
+    "name": "02n",
+    "alphabet": "B0",
+    "blank": "B",
+    "initial": "q_even",
+    "finals": ["HALT"],
+    "states": ["HALT", "q_even", "q_odd", "q_reject_r"],
+    "transitions":{
+        "q_even": [
+            {"read": "B", "write": "y", "next_state": "HALT", "action": "Right"},
+            {"read": "0", "write": "0", "next_state": "q_odd", "action": "Right"}
+        ],
+
+        "q_odd": [
+            {"read": "0", "write": "0", "next_state": "q_even", "action": "Right"}
+        ],
+
+        "q_reject_r": [
+            {"read": "B", "write": "n", "next_state": "HALT", "action": "Right"},
+            {"read": "0", "write": "0", "next_state": "q_reject_r", "action": "Right"}
+        ]
+    }
+}

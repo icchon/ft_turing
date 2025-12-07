@@ -1,0 +1,3473 @@
+{
+    "name": "utm",
+    "alphabet": "<>;BxyzXYZaopAOPrl",
+    "blank": "B",
+    "initial": "init",
+    "finals": [
+        "HALT"
+    ],
+    "states": [
+        "HALT",
+        "a?",
+        "a?<-",
+        "a?.",
+        "al",
+        "al->",
+        "al.",
+        "ar",
+        "ar->",
+        "ar.",
+        "init",
+        "mark",
+        "n?",
+        "n?<-",
+        "n?.",
+        "ny",
+        "ny->",
+        "nz",
+        "nz->",
+        "s?",
+        "s?<-",
+        "s?->",
+        "sx_d?",
+        "sx_d?->",
+        "sx_da_w?",
+        "sx_da_w?<-",
+        "sx_da_w?.",
+        "sy_d?",
+        "sy_d?->",
+        "sy_da_w?",
+        "sy_da_w?<-",
+        "sy_da_w?.",
+        "sy_dp_w?",
+        "sy_dp_w?<-",
+        "sy_dp_w?.",
+        "w?",
+        "wa",
+        "wa->",
+        "wo",
+        "wo->"
+    ],
+    "transitions": {
+        "init": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "mark",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "init",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "init",
+                "action": "Right"
+            }
+        ],
+        "mark": [
+            {
+                "read": "a",
+                "write": "A",
+                "next_state": "s?<-",
+                "action": "Left"
+            }
+        ],
+        "s?->": [
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "s?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "s?->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "s?->",
+                "action": "Right"
+            }
+        ],
+        "s?<-": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "s?",
+                "action": "Left"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "s?<-",
+                "action": "Left"
+            }
+        ],
+        "s?": [
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "HALT",
+                "action": "Left"
+            }
+        ],
+        "sx_d?->": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sx_d?->",
+                "action": "Right"
+            }
+        ],
+        "sy_d?->": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_d?->",
+                "action": "Right"
+            }
+        ],
+        "sx_d?": [
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sx_d?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sx_d?",
+                "action": "Right"
+            }
+        ],
+        "sy_d?": [
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_d?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_d?",
+                "action": "Right"
+            }
+        ],
+        "sx_da_w?<-": [
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sx_da_w?<-",
+                "action": "Left"
+            }
+        ],
+        "sy_da_w?<-": [
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_da_w?<-",
+                "action": "Left"
+            }
+        ],
+        "sy_dp_w?<-": [
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_dp_w?<-",
+                "action": "Left"
+            }
+        ],
+        "sx_da_w?": [
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sx_da_w?.",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            }
+        ],
+        "sy_da_w?": [
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_da_w?.",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            }
+        ],
+        "sy_dp_w?": [
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_dp_w?.",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            }
+        ],
+        "sx_da_w?.": [
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "w?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sx_da_w?",
+                "action": "Right"
+            }
+        ],
+        "sy_da_w?.": [
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "w?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_da_w?",
+                "action": "Right"
+            }
+        ],
+        "sy_dp_w?.": [
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "w?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "sy_dp_w?",
+                "action": "Right"
+            }
+        ],
+        "w?": [
+            {
+                "read": "o",
+                "write": "O",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "A",
+                "next_state": "wa->",
+                "action": "Right"
+            }
+        ],
+        "wo->": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "wo->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "wo->",
+                "action": "Right"
+            }
+        ],
+        "wa->": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "wa->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "wa->",
+                "action": "Right"
+            }
+        ],
+        "wo": [
+            {
+                "read": "A",
+                "write": "O",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "wo",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "wo",
+                "action": "Right"
+            }
+        ],
+        "wa": [
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "A",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "wa",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "wa",
+                "action": "Right"
+            }
+        ],
+        "n?<-": [
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "n?<-",
+                "action": "Left"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "n?<-",
+                "action": "Left"
+            }
+        ],
+        "n?": [
+            {
+                "read": "O",
+                "write": "o",
+                "next_state": "n?.",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "a",
+                "next_state": "n?.",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "n?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "n?",
+                "action": "Right"
+            }
+        ],
+        "n?.": [
+            {
+                "read": "y",
+                "write": "Y",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "Z",
+                "next_state": "nz->",
+                "action": "Right"
+            }
+        ],
+        "ny->": [
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "ny",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "ny->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "ny->",
+                "action": "Right"
+            }
+        ],
+        "nz->": [
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "nz",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "nz->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "nz->",
+                "action": "Right"
+            }
+        ],
+        "ny": [
+            {
+                "read": "x",
+                "write": "y",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "a?<-",
+                "action": "Left"
+            }
+        ],
+        "nz": [
+            {
+                "read": "y",
+                "write": "z",
+                "next_state": "a?<-",
+                "action": "Left"
+            }
+        ],
+        "a?<-": [
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "a?<-",
+                "action": "Left"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "a?<-",
+                "action": "Left"
+            }
+        ],
+        "a?": [
+            {
+                "read": "Y",
+                "write": "y",
+                "next_state": "a?.",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "z",
+                "next_state": "a?.",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "a?",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "a?",
+                "action": "Right"
+            }
+        ],
+        "a?.": [
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "al->",
+                "action": "Right"
+            }
+        ],
+        "ar->": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "ar->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "ar->",
+                "action": "Right"
+            }
+        ],
+        "al->": [
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "A",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "O",
+                "write": "O",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "al->",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "al->",
+                "action": "Right"
+            }
+        ],
+        "ar": [
+            {
+                "read": "O",
+                "write": "o",
+                "next_state": "ar.",
+                "action": "Right"
+            },
+            {
+                "read": "A",
+                "write": "a",
+                "next_state": "ar.",
+                "action": "Right"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "ar",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "ar",
+                "action": "Right"
+            }
+        ],
+        "al": [
+            {
+                "read": "O",
+                "write": "o",
+                "next_state": "al.",
+                "action": "Left"
+            },
+            {
+                "read": "A",
+                "write": "a",
+                "next_state": "al.",
+                "action": "Left"
+            },
+            {
+                "read": "<",
+                "write": "<",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": ">",
+                "write": ">",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "B",
+                "write": "B",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "P",
+                "write": "P",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "X",
+                "write": "X",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "Y",
+                "write": "Y",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "Z",
+                "write": "Z",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "a",
+                "write": "a",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "o",
+                "write": "o",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "p",
+                "write": "p",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "x",
+                "write": "x",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "y",
+                "write": "y",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "z",
+                "write": "z",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": ";",
+                "write": ";",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "l",
+                "write": "l",
+                "next_state": "al",
+                "action": "Right"
+            },
+            {
+                "read": "r",
+                "write": "r",
+                "next_state": "al",
+                "action": "Right"
+            }
+        ],
+        "ar.": [
+            {
+                "read": "a",
+                "write": "A",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "P",
+                "next_state": "s?<-",
+                "action": "Left"
+            }
+        ],
+        "al.": [
+            {
+                "read": "a",
+                "write": "A",
+                "next_state": "s?<-",
+                "action": "Left"
+            }
+        ]
+    }
+}

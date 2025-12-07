@@ -1,0 +1,38 @@
+{
+    "name": "add",
+    "alphabet": "B1+",
+    "blank": "B",
+    "initial": "init",
+    "finals": [
+        "HALT"
+    ],
+    "states": [
+        "init",
+        "find_plus",
+        "HALT"
+    ],
+    "transitions": {
+        "init": [
+            {
+                "read": "1",
+                "write": "B",
+                "next_state": "find_plus",
+                "action": "Right"
+            }
+        ],
+        "find_plus": [
+            {
+                "read": "1",
+                "write": "1",
+                "next_state": "find_plus",
+                "action": "Right"
+            },
+            {
+                "read": "+",
+                "write": "1",
+                "next_state": "HALT",
+                "action": "Left"
+            }
+        ]
+    }
+}

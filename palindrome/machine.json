@@ -1,0 +1,53 @@
+{
+    "name": "palindrome",
+    "alphabet": "B10",
+    "blank": "B",
+    "initial": "q_start",
+    "finals": ["HALT"],
+    "states": ["HALT", "q_start", "q_next_l_edge_0", "q_next_l_edge_1", "q_mov_r_0", "q_check_0", "q_mov_r_1", "q_check_1", "q_mov_l"],
+    "transitions":{
+        "q_start": [
+            {"read": "0", "write": "B", "next_state": "q_next_l_edge_0", "action": "Right"},
+            {"read": "1", "write": "B", "next_state": "q_next_l_edge_1", "action": "Right"},
+            {"read": "B", "write": "y", "next_state": "HALT", "action": "Right"}
+        ],
+        "q_next_l_edge_0": [
+            {"read": "B", "write": "y", "next_state": "HALT", "action": "Right"},
+            {"read": "1", "write": "1", "next_state": "q_mov_r_0", "action": "Right"},
+            {"read": "0", "write": "0", "next_state": "q_mov_r_0", "action": "Right"}
+        ],
+        "q_next_l_edge_1": [
+            {"read": "B", "write": "y", "next_state": "HALT", "action": "Right"},
+            {"read": "1", "write": "1", "next_state": "q_mov_r_1", "action": "Right"},
+            {"read": "0", "write": "0", "next_state": "q_mov_r_1", "action": "Right"}
+        ],
+
+        "q_mov_r_0": [
+            {"read": "0", "write": "0", "next_state": "q_mov_r_0", "action": "Right"},
+            {"read": "1", "write": "1", "next_state": "q_mov_r_0", "action": "Right"},
+            {"read": "B", "write": "B", "next_state": "q_check_0", "action": "Left"}
+        ],
+
+        "q_check_0": [
+            {"read": "0", "write": "B", "next_state": "q_mov_l", "action": "Left"},
+            {"read": "1", "write": "n", "next_state": "HALT", "action": "Right"}
+        ],
+
+        "q_mov_r_1": [
+            {"read": "0", "write": "0", "next_state": "q_mov_r_1", "action": "Right"},
+            {"read": "1", "write": "1", "next_state": "q_mov_r_1", "action": "Right"},
+            {"read": "B", "write": "B", "next_state": "q_check_1", "action": "Left"}
+        ],
+
+        "q_check_1": [
+            {"read": "1", "write": "B", "next_state": "q_mov_l", "action": "Left"},
+            {"read": "0", "write": "n", "next_state": "HALT", "action": "Right"}
+        ],
+
+        "q_mov_l": [
+            {"read": "0", "write": "0", "next_state": "q_mov_l", "action": "Left"},
+            {"read": "1", "write": "1", "next_state": "q_mov_l", "action": "Left"},
+            {"read": "B", "write": "B", "next_state": "q_start", "action": "Right"}
+        ]
+    }
+}
