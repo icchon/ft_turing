@@ -24,6 +24,6 @@ clean:
 	rm -f $(TARGET) $(SRC_DIR)/*.cmo $(SRC_DIR)/*.cmi $(SRC_DIR)/*.cmx $(SRC_DIR)/*.o
 
 enter:
-	docker-compose exec -it turing /bin/bash
+	docker-compose exec -u root turing /bin/bash
 
 .PHONY: all clean check-deps enter
