@@ -3455,6 +3455,12 @@
                 "action": "Left"
             },
             {
+                "read": "o",
+                "write": "O",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
                 "read": "p",
                 "write": "P",
                 "next_state": "s?<-",
@@ -3465,6 +3471,18 @@
             {
                 "read": "a",
                 "write": "A",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "o",
+                "write": "O",
+                "next_state": "s?<-",
+                "action": "Left"
+            },
+            {
+                "read": "p",
+                "write": "P",
                 "next_state": "s?<-",
                 "action": "Left"
             }

@@ -32,12 +32,14 @@
 
         "q_check_0": [
             {"read": "1", "write" :"n", "next_state": "HALT", "action": "Right"},
-            {"read": "0", "write": "B", "next_state": "q_mov_l", "action": "Left"}
+            {"read": "0", "write": "B", "next_state": "q_mov_l", "action": "Left"},
+            {"read": "B", "write": "n", "next_state": "HALT", "action": "Right"}
         ],
 
         "q_check_1": [
             {"read": "1", "write": "B", "next_state": "q_mov_l", "action": "Left"},
-            {"read": "0", "write": "n", "next_state": "HALT", "action": "Right"}
+            {"read": "0", "write": "n", "next_state": "HALT", "action": "Right"},
+            {"read": "B", "write": "n", "next_state": "HALT", "action": "Right"}
         ],
 
         "q_mov_l": [
