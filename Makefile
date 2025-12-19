@@ -1,7 +1,7 @@
 OCAMLFIND = ocamlfind
 OCAMLOPT = $(OCAMLFIND) ocamlopt
 PKGS = yojson
-TARGET = test
+TARGET = turing
 SRC_DIR = src
 SOURCES = $(addprefix $(SRC_DIR)/, action.ml tape.ml machine.ml simulator.ml main.ml)
 CMX_FILES = $(SOURCES:.ml=.cmx)
