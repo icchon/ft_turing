@@ -106,9 +106,9 @@
 ## Getting Started
 
 ### Prerequisites
--   **Docker**
--   **Docker Compose**
--   **GNU make**
+-   **Docker** (`29.1.3` or later)
+-   **Docker Compose** (`5.0.0` or later)
+-   **GNU make** (`3.8.1` or later)
 
 ### Installation
 ```sh
